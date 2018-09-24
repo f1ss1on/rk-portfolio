@@ -124,11 +124,11 @@ get_header(); ?>
   <section id="work">
     <div class="inner-content">
       <h1 class="section-title">Work</h1>
-      <div class="featured"> <a href="http://saveur.com" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/saveur.jpg" alt="Saveur.com"> <span>Saveur</span></a> </div>
+      <div class="featured"> <a href="http://saveur.com" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/saveur.jpg" alt="Saveur.com"> <span>Saveur</span></a> </div>
       <div class="other-work">
-        <div class="project"> <a href="http://aplusemail.com" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aplusemail.PNG" alt="aplusemail.com"> <span>A+ Email</span></a> </div>
-        <div class="project"> <a href="http://modcrash.com" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/modcrash.PNG" alt="ModCrash.com"> <span>ModCrash</span></a> </div>
-        <div class="project"> <a href="http://fieldandstream.com" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bmielite-book.PNG" alt="Field and Stream"> <span>Field &amp; Stream</span></a> </div>
+        <div class="project"> <a href="http://aplusemail.com" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/aplusemail.PNG" alt="aplusemail.com"> <span>A+ Email</span></a> </div>
+        <div class="project"> <a href="http://modcrash.com" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/modcrash.PNG" alt="ModCrash.com"> <span>ModCrash</span></a> </div>
+        <div class="project"> <a href="http://fieldandstream.com" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bmielite-book.PNG" alt="Field and Stream"> <span>Field &amp; Stream</span></a> </div>
       </div>
       <div class="spacer"></div>
       <button href="http://riadkilani.com/portfolio" class="normal cta" target="_blank">View More Work</button> </div>

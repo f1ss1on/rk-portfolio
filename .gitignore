@@ -7,6 +7,8 @@ themes/riad-kilani_v4-child/node_modules
 #Dependencies
 themes/riad-kilani_v4-child/dependencies
 
+themes/riad-kilani_v4-child/package-lock.json
+
 #Cache Config
 wp-cache-config.php
 
