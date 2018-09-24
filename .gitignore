@@ -1,0 +1,17 @@
+#FTP Config File
+.ftpconfig
+
+#Node Modules
+themes/riad-kilani_v4-child/node_modules
+
+#Dependencies
+themes/riad-kilani_v4-child/dependencies
+
+#Cache Config
+wp-cache-config.php
+
+#logs
+wflogs/
+upgrade/
+cache/
+mu-plugins/

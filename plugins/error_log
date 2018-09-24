@@ -1,0 +1,5 @@
+[21-Sep-2017 21:58:34 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home3/modcrash/public_html/riad.design/wp-content/plugins/hello.php on line 60
+[23-Jan-2018 06:40:50 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home3/modcrash/public_html/riad.design/wp-content/plugins/hello.php on line 60
+[10-Feb-2018 09:17:56 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home3/modcrash/public_html/riad.design/wp-content/plugins/hello.php on line 60
+[31-May-2018 13:20:36 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home3/modcrash/public_html/riad.design/wp-content/plugins/hello.php on line 60
+[11-Jun-2018 12:48:49 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home3/modcrash/public_html/riad.design/wp-content/plugins/hello.php on line 60

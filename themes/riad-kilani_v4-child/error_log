@@ -1,0 +1,3 @@
+[02-Feb-2018 14:22:50 America/Chicago] PHP Fatal error:  Call to undefined function language_attributes() in /home3/modcrash/public_html/riad.design/wp-content/themes/riad-kilani_v4-child/header.php on line 13
+[02-Feb-2018 14:22:52 America/Chicago] PHP Fatal error:  Call to undefined function language_attributes() in /home3/modcrash/public_html/riad.design/wp-content/themes/riad-kilani_v4-child/header.php on line 13
+[03-Jul-2018 16:35:33 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home3/modcrash/public_html/riad.design/wp-content/themes/riad-kilani_v4-child/index.php on line 15

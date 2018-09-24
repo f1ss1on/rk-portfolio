@@ -1,0 +1,247 @@
+@media all and (max-width: 767px) {
+  .site-nav {
+    border: 0;
+    display: block;
+    position: absolute;
+    width: 768px;
+    top: 0;
+    right: 0;
+    text-align: right;
+    background: #333;
+    z-index: 1;
+    height: 100vh;
+
+    ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: block;
+      float: none;
+      border: 0;
+      box-shadow: rgba(255,255,255,0.05) 0 1px 0 inset, rgba(0,0,0,0.5) 0 -1px 0;
+
+      &.social-link {
+        display: inline-block !important;
+      }
+
+      ul {
+        width: 100%;
+
+        li {
+          display: inline-block;
+          width: 11%;
+          text-align: center;
+          border: none;
+          box-shadow: none;
+
+          a {
+            text-align: center;
+          }
+        }
+      }
+
+      a {
+        font-size: 16px;
+        line-height: 38px;
+        text-align: right;
+        color: #fff;
+        padding: 10px 10px 10px 20px;
+        display: block;
+
+        &:hover {
+          background-color: #a0c13b;
+        }
+
+        .fa-user {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 768px) {
+  .site-nav {
+    float: right;
+    height: 100%;
+    background-color: transparent;
+    width: auto;
+    display: flex;
+    position: inherit;
+
+    ul {
+      margin: 0;
+      display: -webkit-box;
+      display: flex;
+      height: 100%;
+      margin-left: auto;
+      margin-right: 10px;
+      list-style: none;
+      padding: 0;
+      letter-spacing: 1px;
+
+      li {
+        display: inline-block;
+        padding: 5px 10px;
+        list-style-type: none;
+        -webkit-transition: all ease 0.8s;
+        -moz-transition: all ease 0.8s;
+        transition: all ease 0.8s;
+        -webkit-transform: skew(-15deg);
+        transform: skew(-15deg);
+        font-size: 14px;
+        box-shadow: none;
+        position: relative;
+
+        ul {
+          -webkit-transition: all ease-in-out 0.6s;
+          -moz-transition: all ease-in-out 0.6s;
+          transition: all ease-in-out 0.6s;
+          /* transition: color .1s; */
+          padding: 0;
+          position: absolute;
+          top: 100px;
+          right: 0;
+          visibility: hidden;
+          z-index: -1;
+          opacity: 0;
+
+          li {
+            -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+          }
+        }
+
+        &:hover {
+          background-color: #a0c13b;
+
+          a {
+            color: #fff;
+          }
+
+          ul {
+            display: flex;
+            top: 80px;
+            visibility: visible;
+            opacity: 1;
+            background-color: #a0c13b;
+            width: 321px;
+            right: -10px;
+            height: 50px;
+
+            li {
+              display: inline-block;
+              padding: 5px 10px;
+
+              &:hover {
+                box-shadow: none;
+                background-color: #4a5b1f;
+                -webkit-transform: skew(0deg);
+                transform: skew(0deg);
+              }
+
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        a {
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-align: center;
+          align-items: center;
+          height: 100%;
+          padding: 0 25px;
+          -webkit-transform: skew(15deg);
+          transform: skew(15deg);
+          -webkit-transition: color 0.1s;
+          transition: color 0.1s;
+          width: 60px;
+          -webkit-box-pack: center;
+          justify-content: center;
+          color: #4a5b1f;
+          text-decoration: none;
+
+          &:visited {
+            color: #4a5b1f;
+          }
+
+          &:active,
+          &:hover {
+            color: #fff;
+            text-decoration: none;
+            box-shadow: none;
+          }
+        }
+
+        &.mobile-social {
+          display: none;
+        }
+
+        &.facebook {
+          font-size: 20px;
+
+          a {
+            color: #3b5998;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        &.twitter {
+          font-size: 20px;
+
+          a {
+            color: #4099ff;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        &.codepen {
+          font-size: 20px;
+
+          a {
+            color: #000;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+
+        &.soundcloud {
+          font-size: 20px;
+
+          a {
+            color: #ff7700;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media all and (max-width: 1135px) {
+  .sticky {
+    position: relative;
+  }
+}
