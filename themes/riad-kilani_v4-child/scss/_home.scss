@@ -1,10 +1,12 @@
 /* The alert message box */
+
 .info {
   padding: 20px;
   background-color: #2196F3;
   color: white;
 }
 /* The close button */
+
 .closebtn {
   margin-left: 15px;
   color: white;
@@ -16,6 +18,7 @@
   transition: 0.3s;
 }
 /* When moving the mouse over the close button */
+
 .closebtn:hover {
   color: black;
 }
@@ -94,7 +97,7 @@ section#welcome {
 
 #skills {
   padding: 60px 0;
-  background: url("../images/skill-bg.png") 0 0 no-repeat;
+  background: url("../images/skill-bg.jpg") 0 0 no-repeat;
   background-size: auto cover;
 
   .inner {
