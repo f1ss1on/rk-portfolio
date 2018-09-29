@@ -1,19 +1,29 @@
 /* ========Buttons======== */
+
 .normal {
-  background: rgba(160, 193, 59, 1);
-  border: solid 1px rgba(160, 193, 59, 1);
-  color: #fff;
+  background: $primarygreen;
+  border: solid 1px $primarygreen;
+  color: $white;
   box-shadow: none;
   border-radius: 0;
-  text-shadow: 1px 1px 1px rgba(74, 91, 31, 1);
+  text-shadow: 1px 1px 1px $altgreen;
   text-transform: uppercase;
   font-weight: bold;
   @include font-size(1);
 
   &:hover {
-    background: rgba(74, 91, 31, 1);
-    border-color: rgba(74, 91, 31, 1);
+    background: $altgreen;
+    border-color: $altgreen;
     box-shadow: none;
+  }
+
+  &.alt {
+    background: $standout;
+    border-color: $standout;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 

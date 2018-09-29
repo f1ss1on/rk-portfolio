@@ -1,6 +1,6 @@
 .site-footer {
-  background-color: $color-08;
-  color: $color-01;
+  background-color: $darkgrey;
+  color: $white;
   padding: 60px 20px;
 
   h4 {
@@ -23,7 +23,7 @@
 
     .ftag {
       .standout {
-        color: #a0c13b;
+        color: $primarygreen;
         @include font-size(2.4);
         font-family: $headlineFont;
         display: block;
@@ -112,8 +112,6 @@
 }
 @media all and (max-width: 1135px) {
   .site-footer {
-    margin: 0 -20px;
-
     .footer-bottom {
       flex-wrap: wrap;
 

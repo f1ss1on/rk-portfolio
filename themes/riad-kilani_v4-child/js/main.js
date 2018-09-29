@@ -3,9 +3,9 @@ jQuery(document).ready(function($) {
   /*JS FOR LOADING
   setTimeout(function() {
     $("body").addClass("loaded");
-  }, 3000);
-  */
-  
+  }, 2000);*/
+
+
   //Smooth Scrolling
   $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -34,9 +34,9 @@ jQuery(document).ready(function($) {
   //Sticky Header
   $(window).scroll(function() {
     if ($(this).scrollTop() > 1) {
-      $("header").addClass("sticky");
+      $(".site-header").addClass("sticky");
     } else {
-      $("header").removeClass("sticky");
+      $(".site-header").removeClass("sticky");
     }
   });
 
@@ -82,36 +82,7 @@ jQuery(document).ready(function($) {
     });
   });
 
-  // Run Adaptive background
-  $.adaptiveBackground.run({
-    parent: "1" //don't make it do anything to the background
-  });
 
-  // Run FlexSlider
-  $(".flexslider").flexslider({
-    controlNav: false,
-    animation: "slide",
-
-    start: function(slider) {
-      $("body").removeClass("loading");
-
-      //Find the current slide and it's image
-      var thisSlide = slider.slides.eq(slider.currentSlide);
-      var thisImg = $(thisSlide).find("img");
-
-      //Take the data-ab-color property that AD set and apply it to the parent.
-      $("#featured").css({ background: $(thisImg).attr("data-ab-color") });
-    },
-
-    before: function(slider) {
-      // Find the current slide and it's image
-      var animateSlide = slider.slides.eq(slider.animatingTo);
-      var thisImg = $(animateSlide).find("img");
-
-      //Take the data-ab-color property that AD set and apply it to the parent.
-      $("#featured").css({ background: $(thisImg).attr("data-ab-color") });
-    }
-  });
 
   /*
 * Function to animate leaving a page
@@ -145,4 +116,177 @@ jQuery(document).ready(function($) {
 * Call the leavePage function upon link clicks with the "transition" class
 */
   $(".transition").leavePage();
+
+
+
+
 }); //End NoConflict jQuery Wrapper
+var colors = Highcharts.getOptions().colors,
+  categories = [
+    "Web Design",
+    "Development",
+    "Marketing"
+  ],
+  data = [
+    {
+      "y": 39,//UX
+      "color": colors[2],
+      "drilldown": {
+        "name": "Web",
+        "categories": [
+          "UI Design",
+          "UX",
+          "Accessibility",
+          "Information Architexture",
+          "Graphic Design"
+        ],
+        "data": [
+          12,
+          13,
+          3,
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "y": 50,//Web
+      "color": colors[0],
+      "drilldown": {
+        "name": "Web",
+        "categories": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Angular",
+          "React",
+          "PHP",
+          "SASS"
+        ],
+        "data": [
+          10,
+          10,
+          8,
+          5,
+          3,
+          4,
+          10
+        ]
+      }
+    },
+    {
+      "y": 24,//Design
+      "color": colors[3],
+      "drilldown": {
+        "name": "Marketing",
+        "categories": [
+          "Analytics",
+          "A/B Testing",
+          "Ad Performance"
+        ],
+        "data": [
+          10,
+          9,
+          5
+        ]
+      }
+    }
+  ],
+  skillData = [],
+  versionsData = [],
+  i,
+  j,
+  dataLen = data.length,
+  drillDataLen,
+  brightness;
+
+
+// Build the data arrays
+for (i = 0; i < dataLen; i += 1) {
+
+  // add browser data
+  skillData.push({
+    name: categories[i],
+    y: data[i].y,
+    color: data[i].color
+  });
+
+  // add version data
+  drillDataLen = data[i].drilldown.data.length;
+  for (j = 0; j < drillDataLen; j += 1) {
+    brightness = 0.2 - (j / drillDataLen) / 5;
+    versionsData.push({
+      name: data[i].drilldown.categories[j],
+      y: data[i].drilldown.data[j],
+      color: Highcharts.Color(data[i].color).brighten(brightness).get()
+    });
+  }
+}
+
+// Create the chart
+Highcharts.chart('skillsets', {
+  chart: {
+    backgroundColor: 'rgba(255, 255, 255, 0.0)',
+    type: 'pie'
+  },
+  title: {
+    text: ''
+  },
+  subtitle: {
+    text: ''
+  },
+  yAxis: {
+    title: {
+      text: ''
+    }
+  },
+  plotOptions: {
+    pie: {
+      shadow: false,
+      center: ['40%', '40%']
+    }
+  },
+  tooltip: {
+    valueSuffix: '%'
+  },
+  series: [{
+    name: 'Skills',
+    data: skillData,
+    size: '50%',
+    dataLabels: {
+      formatter: function () {
+        return this.y > 5 ? this.point.name : null;
+      },
+      color: '#ffffff',
+      distance: -60
+    }
+  }, {
+    name: 'Versions',
+    data: versionsData,
+    size: '60%',
+    innerSize: '80%',
+    dataLabels: {
+      formatter: function () {
+        // display only if larger than 1
+        return this.y > 1 ? '<b>' + this.point.name + ':</b> ' +
+          this.y + '%' : null;
+      }
+    },
+    id: 'versions'
+  }],
+  responsive: {
+    rules: [{
+      condition: {
+        maxWidth: 500
+      },
+      chartOptions: {
+        series: [{
+          id: 'versions',
+          dataLabels: {
+            enabled: false
+          }
+        }]
+      }
+    }]
+  }
+});

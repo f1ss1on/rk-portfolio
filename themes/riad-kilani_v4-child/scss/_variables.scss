@@ -4,39 +4,27 @@
 /* 3. Typography
 /* 4. Responsive Sizes
 /* =========================================================================== */
-
 /* ================================== COLORS ================================= */
-$color-01: #FFF;     /* White */
-$color-02: #000;     /* Black */
-$color-03: #333;     /* Standard light grey */
-$color-04: #666;     /* Standard grey */
-$color-05: #999;     /* Standard dark grey */
-$color-06: #e2e2e2;  /* Grey */
-$color-07: #c9c9c9;  /* Light grey */
-$color-08: #272727;  /* Dark grey */
-$color-09: #1a1a1a;  /* Black grey */
-$color-10: #efefef;  /* Extra light grey */
-$color-11: #004a7e;  /* Sandcastle Blue */
-$color-12: #0074BD;  /* Admin blue */
-$color-13: #ff862a;  /* RSS orange */
-
-
+$white: rgba(255, 255, 255, 1); /* White */
+$black: rgba(0, 0, 0, 1); /* Black */
+$lightgrey: rgba(201, 201, 201, 1); /* Light grey */
+$grey: rgba(39, 39, 39, 1); /* Primary Text */
+$darkgrey: rgba(26, 26, 26, 1); /* Head Text */
+$altgreen: rgba(74, 91, 31, 1); /* Alt Green */
+$primarygreen: rgba(160, 193, 59, 1); /* Primary Green */
+$standout: rgba(255, 153, 0, 1); /* RSS orange */
 /* ============================= RESPONSIVE SIZES ============================ */
 $respondTablet: 999px;
 $respondTabletSmall: 767px;
 $respondMobile: 639px;
 $respondMobileSmall: 479px;
-
-/* =============================== TECH VALUES ============================== */
-$HTML5: 100%;
+$maxWidth: 1200px; /* =============================== TECH VALUES ============================== */
+$HTML5: 90%;
 $CSS3: 100%;
-$JS: 70%;
-$PHP: 40%;
-$WP: 100%;
-
-
-
-
-
-
-
+$JS: 90%;
+$PHP: 60%;
+$WP: 100%; /* =============================== Margins & Paddings ============================== */
+$marginCenter: 0 auto;
+$noMargin: 0;
+$negMargin: 0 -20px;
+$paddingLR: 0 20px;

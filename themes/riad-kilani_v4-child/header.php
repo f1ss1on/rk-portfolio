@@ -45,14 +45,14 @@
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
-  </div>
+  </div>-->
   <div class="inner">
     <div class="info">
       <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
       Hey everyone, thought you might enjoy watching the dev of riad.design. For my old portfolio visit <a href="http://riadkilani.com" target="_blank">riadkilani.com</a>
     </div>
   </div>
--->
+
 <?php endif; ?>
 <div id="page" class="site">
 
@@ -82,5 +82,5 @@
       <span class="rk-icon"></span>
       <h1>Riad Kilani</h1>
       </a>
-    <a href="#" class="mobile-button"><i class="fa fa-bars"></i></a>
+    <a href="#" class="mobile-button"><i class="fas fa-bars"></i></a>
   </header>

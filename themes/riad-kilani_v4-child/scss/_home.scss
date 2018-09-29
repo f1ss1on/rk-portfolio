@@ -30,8 +30,8 @@
   max-width: 100%;
 }
 
-section#intro {
-  background: url("../img/intro-bg-img.jpg") 0 0 no-repeat;
+#intro {
+  background: url("../images/intro-bg-img.jpg") 0 0 no-repeat;
   background-size: cover;
   text-align: center;
   padding: 60px 0;
@@ -48,25 +48,28 @@ section#intro {
   }
 }
 @media all and (max-width: 767px) {
-  section#intro {
-    margin: 0 -20px;
-  }
+  #intro {}
 }
 
 section#about {
-  //background: url("../img/intro-bg-img.jpg") 0 0 no-repeat;
+  //background: url("../images/intro-bg-img.jpg") 0 0 no-repeat;
   text-align: center;
   padding: 60px 0;
+  min-height: 36.5em;
 
   article {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 36.5em;
+    flex-wrap: wrap;
 
     .inner-content {
       vertical-align: middle;
     }
+  }
+
+  .progress {
+    transition: ease-in-out;
   }
 }
 
@@ -89,148 +92,110 @@ section#welcome {
   }
 }
 
-section#technologies {
-  background: url("../img/code-008.jpg") 0 0 no-repeat;
+#skills {
+  padding: 60px 0;
+  background: url("../images/skill-bg.png") 0 0 no-repeat;
+  background-size: auto cover;
 
-  #tech {
+  .inner {
+    text-align: center;
+  }
+
+  .skills-list {
+    margin: 0;
+    padding: 0;
+    min-height: 120px;
+
+    li {
+      list-style-type: none;
+      margin: 0 0 10px;
+      padding: 0;
+      border: solid 1px #ccc;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+  }
+
+  .progress-bar {
     width: 100%;
-    text-align: justify;
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines;
+    margin: 0 auto;
+    background-color: transparent;
+    text-align: left;
 
-    &:after {
-      content: '';
-      width: 100%;
-      display: inline-block;
-      font-size: 0;
-      line-height: 0;
+    span {
+      width: 0;
+      padding: 0 10px;
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      background-color: #fff;
+      -webkit-transition: width 2s;
+      /* For Safari 3.1 to 6.0 */
+      transition: width 1s;
+      color: #000;
+      opacity: 0.8;
+      @include font-size(1.1);
     }
 
-    .skills {
-      display: inline-block;
-      vertical-align: top;
-      width: 200px;
-      height: 200px;
-
-      .progress {
-        transition: ease-in-out;
-      }
-
-      .progress-bar {
-        width: 100%;
-        margin: 0 auto;
-        border: solid 1px #fff;
-        background-color: transparent;
-
-        span {
-          width: 0;
-          height: 20px;
-          line-height: 20px;
-          display: block;
-          background-color: #fff;
-          -webkit-transition: width 2s;
-          /* For Safari 3.1 to 6.0 */
-          transition: width 1s;
-          color: #000;
-        }
-      }
-
-      &.html5:hover .progress-bar span {
-        width: $HTML5;
-        color: #ff6600;
-      }
-
-      &.css3:hover .progress-bar span {
-        width: $CSS3;
-        color: #2563F3;
-      }
-
-      &.javascript:hover .progress-bar span {
-        width: $JS;
-        color: #34C900;
-      }
-
-      &.php:hover .progress-bar span {
-        width: $PHP;
-        color: #367DB0;
-      }
-
-      &.wordpress:hover .progress-bar span {
-        width: $WP;
-        color: #666;
-      }
-
-      .back,
-      .flip-container,
-      .front {
-        width: 200px;
-        height: 200px;
-      }
-
-      .flip-container {
-        perspective: 1000px;
-
-        &:hover {
-          .flipper {
-            transform: rotateY(180deg);
-          }
-        }
-
-        &.hover .flipper {
-          transform: rotateY(180deg);
-        }
-
-        .flipper {
-          transition: 0.6s;
-          transform-style: preserve-3d;
-          position: relative;
-        }
-
-        .back,
-        .front {
-          backface-visibility: hidden;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-
-        .front {
-          z-index: 2;
-          transform: rotateY(0deg);
-        }
-
-        .back {
-          transform: rotateY(180deg);
-        }
-      }
+    &.html5 span {
+      width: $HTML5;
+      background-color: #ff6600;
     }
 
-    .back-content {
-      position: absolute;
-      top: 0;
-      left: 0;
+    &.css3 span {
+      width: $CSS3;
+      background-color: #2563F3;
+    }
+
+    &.javascript span {
+      width: $JS;
+      background-color: #34C900;
+    }
+
+    &.php span {
+      width: $PHP;
+      background-color: #367DB0;
+    }
+
+    &.wordpress span {
+      width: $WP;
+      background-color: #666;
+    }
+  }
+
+  .flex-wrapper {
+    display: flex;
+
+    .lefthold {
+      flex-basis: 60%;
+    }
+
+    #skillsets {
       display: block;
       width: 100%;
-      height: 200px;
-      text-align: center;
-      margin: 0 auto;
+      height: 475px;
 
-      .inner {
-        width: 70%;
-        margin: 0 auto;
-        display: block;
-        color: #fff;
-
-        h1 {
-          font-size: 1em;
-        }
+      .highcharts-credits {
+        display: none;
       }
+    }
+
+    .skills-list {
+      margin: 80px 0 0 40px;
+      padding: 0;
+      min-height: 120px;
+      flex-basis: 40%;
     }
   }
 }
+@media all and (max-width: 767px) {
+  #skills {
+    display: none;
+  }
+}
 
-section#work {
-  background: url("../img/maxresdefault.jpg") 0 0 no-repeat;
+#work {
+  background: url("../images/maxresdefault.jpg") 0 0 no-repeat;
   background-size: cover;
   padding: 60px 0;
 
@@ -354,13 +319,11 @@ section#work {
   }
 }
 @media all and (max-width: 767px) {
-  section#technologies {
+  #technologies {
     display: none;
   }
 
-  section#work {
-    margin: 0 -20px;
-
+  #work {
     div,
     h1 {
       flex-basis: 100% !important;

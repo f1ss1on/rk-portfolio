@@ -1,0 +1,139 @@
+::-webkit-input-placeholder {
+  color: $white;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  color: $white;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: $white;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: $white;
+  opacity: 1;
+}
+
+.input-container {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin-bottom: 19px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: $white;
+}
+
+.input-container:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px $white solid;
+}
+
+.input-container.focus {
+  background-color: transparent;
+}
+
+.input-container.input-email input[type=email],
+.input-container.input-email textarea,
+.input-container.input-message input[type=text],
+.input-container.input-message textarea,
+.input-container.input-name input[type=text],
+.input-container.input-name textarea,
+.input-container.input-phone input[type=tel],
+.input-container.input-phone input[type=text],
+.input-container.input-phone textarea {
+  padding-left: 50px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.input-container.input-email:before,
+.input-container.input-message:before,
+.input-container.input-name:before,
+.input-container.input-phone:before {
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 19px;
+  top: 7px;
+  font-size: 21px;
+  pointer-events: none;
+}
+
+.input-container.input-email:before {
+  content: '\f0e0';
+}
+
+.input-container.input-message:before {
+  content: '\f044';
+}
+
+.input-container.input-name:before {
+  content: '\f007';
+}
+
+.input-container.input-phone:before {
+  content: '\f095';
+}
+
+.input-container input[type=email],
+.input-container input[type=tel],
+.input-container input[type=text],
+.input-container textarea {
+  position: relative;
+  font-size: 18px;
+  padding: 13px 15px;
+  color: $white;
+  background-color: transparent;
+  border: 3px rgba(255, 255, 255, 0) solid;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.input-container input[type=text]:focus,
+.input-container textarea:focus {
+  border-color: $white;
+}
+
+input[type=submit] {
+  box-shadow: none;
+  border-radius: 0;
+  display: block;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  border: solid 2px $white;
+  background-color: #3D79B1;
+  color: $white;
+  float: right;
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input[type=submit]:hover {
+  box-shadow: none;
+  border-color: $white;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ccc inset;
+  -webkit-text-fill-color: white !important;
+}

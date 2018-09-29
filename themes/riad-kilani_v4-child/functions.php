@@ -10,11 +10,12 @@ function rk_enqueue_styles() {
 
   wp_enqueue_style('child-styles', get_stylesheet_directory_uri() .'/css/main.min.css', array('parent-theme'));
 
+
+  wp_register_script('chart', 'https://code.highcharts.com/highcharts.js', array('jquery'), 1.1, true);
+  wp_enqueue_script('chart');
+
+
   wp_enqueue_script('custom-js', get_stylesheet_directory_uri() .'/js/main.js', array('jquery'), 1.1, true);
-  wp_register_script('adaptivebg-js', get_stylesheet_directory_uri() .'/js/adaptivebg.js', array('jquery'), 1.1, true);
-  wp_enqueue_script('adaptivebg-js');
-  wp_register_script('flexslider', get_stylesheet_directory_uri() .'/js/jquery.flexslider.js', array('jquery'), 1.1, true);
-  wp_enqueue_script('flexslider');
 
 }
 add_action('wp_enqueue_scripts', 'rk_enqueue_styles');
